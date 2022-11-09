@@ -1,0 +1,12 @@
+﻿/*
+    Função que conta e retorna a quantidade de nós em uma árvore binária
+*/
+int quantidade_nos(NoArv *raiz){
+    if(raiz == NULL)
+        return 0;
+    else
+        return 1 + quantidade_nos(raiz->esquerda) + quantidade_nos(raiz->direita);
+
+    // operador ternário
+    //return (raiz == NULL)? 0: 1 + quantidade_nos(raiz->esquerda) + quantidade_nos(raiz->direita);
+}
